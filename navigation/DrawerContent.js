@@ -21,99 +21,99 @@ export default DrawerContent = (props) => {
           <Text>top section</Text>
         </View>
         <CustomDrawerItem
-          focused={focusedRouteName === "screenOne" ? true : false}
+          focused={focusedRouteName === "accordianOne" ? true : false}
           icon={["far", "bars"]}
-          label="Screen One"
+          label="Accordian"
           onPress={() => {
-            console.log(props.navigation.navigate("screenOne"));
+            console.log(props.navigation.navigate("accordianOne"));
           }}
         />
         <CustomDrawerItem
           focused={focusedRouteName === "screenTwo" ? true : false}
           icon={["far", "bars"]}
-          label="Screen Two"
+          label="to be coded..."
           onPress={() => {
-            console.log(props.navigation.navigate("screenTwo"));
+            // console.log(props.navigation.navigate("screenTwo"));
           }}
         />
         <CustomDrawerItem
           focused={focusedRouteName === "screenTwo" ? true : false}
           icon={["fas", "th"]}
-          label="Dashboard"
+          label="to be coded..."
           onPress={() => {
-            console.log(props.navigation.navigate("screenTwo"));
+            // console.log(props.navigation.navigate("screenTwo"));
           }}
         />
         <CustomDrawerItem
           focused={focusedRouteName === "screenTwo" ? true : false}
           icon={["fas", "th"]}
-          label="Manage My Properties"
+          label="to be coded..."
           onPress={() => {
-            console.log(props.navigation.navigate("screenTwo"));
+            // console.log(props.navigation.navigate("screenTwo"));
           }}
         />
         <CustomDrawerItem
           focused={focusedRouteName === "screenTwo" ? true : false}
           icon={["fas", "user"]}
-          label="Profile"
+          label="to be coded..."
           onPress={() => {
-            console.log(props.navigation.navigate("screenTwo"));
+            // console.log(props.navigation.navigate("screenTwo"));
           }}
         />
         <CustomDrawerItem
           focused={focusedRouteName === "announcementsScreen" ? true : false}
           icon={["fas", "bell"]}
-          label="Announcements"
+          label="to be coded..."
           onPress={() => {
-            console.log(props.navigation.navigate("announcementsScreen"));
+            // console.log(props.navigation.navigate("announcementsScreen"));
           }}
         />
         <CustomDrawerItem
           focused={focusedRouteName === "screenTwo" ? true : false}
           icon={["fas", "file"]}
-          label="Documents"
+          label="to be coded..."
           onPress={() => {
-            console.log(props.navigation.navigate("screenTwo"));
+            // console.log(props.navigation.navigate("screenTwo"));
           }}
         />
         <CustomDrawerItem
           focused={focusedRouteName === "generalInfoScreen" ? true : false}
           icon={["fas", "info-circle"]}
-          label="General Information"
+          label="to be coded..."
           onPress={() => {
-            console.log(props.navigation.navigate("generalInfoScreen"));
+            // console.log(props.navigation.navigate("generalInfoScreen"));
           }}
         />
         <CustomDrawerItem
           focused={focusedRouteName === "legalInfoScreen" ? true : false}
           icon={["fas", "briefcase"]}
-          label="Legal Information"
+          label="to be coded..."
           onPress={() => {
-            console.log(props.navigation.navigate("legalInfoScreen"));
+            // console.log(props.navigation.navigate("legalInfoScreen"));
           }}
         />
         <CustomDrawerItem
           focused={focusedRouteName === "screenTwo" ? true : false}
           icon={["fal", "credit-card"]}
-          label="Payments"
+          label="to be coded..."
           onPress={() => {
-            console.log(props.navigation.navigate("screenTwo"));
+            // console.log(props.navigation.navigate("screenTwo"));
           }}
         />
         <CustomDrawerItem
           focused={focusedRouteName === "faqScreen" ? true : false}
           icon={["fas", "comments-alt"]}
-          label="FAQ's"
+          label="to be coded..."
           onPress={() => {
-            console.log(props.navigation.navigate("faqScreen"));
+            // console.log(props.navigation.navigate("faqScreen"));
           }}
         />
         <CustomDrawerItem
           focused={focusedRouteName === "screenTwo" ? true : false}
           icon={["fas", "sign-out"]}
-          label="Logout"
+          label="to be coded..."
           onPress={() => {
-            console.log(props.navigation.navigate("screenTwo"));
+            // console.log(props.navigation.navigate("screenTwo"));
           }}
         />
       </DrawerContentScrollView>

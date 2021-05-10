@@ -1,15 +1,9 @@
 import * as React from "react";
-import { Button, View } from "react-native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import * as SplashScreen from "expo-splash-screen";
-import ScreenOne from "../screens/ScreenOne";
-import ScreenTwo from "../screens/ScreenTwo";
-import FAQScreen from "../screens/FAQScreen";
+
+import AccordianScreenOne from "../screens/AccordianScreenOne";
 
 import DrawerContent from "./DrawerContent";
-import LegalInformationScreen from "../screens/LegalInformationScreen";
-import GeneralInfoScreen from "../screens/GeneralInfoScreen";
-import AnnouncementsScreen from "../screens/AnnouncementsScreen";
 
 const Drawer = createDrawerNavigator();
 
@@ -18,7 +12,7 @@ export default (props) => {
   // console.log(props);
   return (
     <Drawer.Navigator
-      initialRouteName="faqScreen"
+      initialRouteName="accordian"
       drawerType="front"
       drawerStyle={{
         backgroundColor: "rgba(255,255,255,1)",
@@ -26,18 +20,7 @@ export default (props) => {
       }}
       drawerContent={(props) => <DrawerContent {...props} />}
     >
-      <Drawer.Screen name="screenOne" component={ScreenOne} />
-      <Drawer.Screen name="screenTwo" component={ScreenTwo} />
-      <Drawer.Screen name="faqScreen" component={FAQScreen} />
-      <Drawer.Screen
-        name="legalInfoScreen"
-        component={LegalInformationScreen}
-      />
-      <Drawer.Screen name="generalInfoScreen" component={GeneralInfoScreen} />
-      <Drawer.Screen
-        name="announcementsScreen"
-        component={AnnouncementsScreen}
-      />
+      <Drawer.Screen name="accordianOne" component={AccordianScreenOne} />
     </Drawer.Navigator>
   );
 };

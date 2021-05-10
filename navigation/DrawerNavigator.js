@@ -1,7 +1,8 @@
 import * as React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 
-import AccordianScreenOne from "../screens/AccordianScreenOne";
+import AccordianExampleScreen from "../screens/AccordianExampleScreen";
+import AccordianMyVersionScreen from "../screens/AccordianMyVersionScreen";
 
 import DrawerContent from "./DrawerContent";
 
@@ -20,7 +21,14 @@ export default (props) => {
       }}
       drawerContent={(props) => <DrawerContent {...props} />}
     >
-      <Drawer.Screen name="accordianOne" component={AccordianScreenOne} />
+      <Drawer.Screen
+        name="accordianExample"
+        component={AccordianExampleScreen}
+      />
+      <Drawer.Screen
+        name="accordianMyVersion"
+        component={AccordianMyVersionScreen}
+      />
     </Drawer.Navigator>
   );
 };

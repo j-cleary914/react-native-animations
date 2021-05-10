@@ -28,7 +28,7 @@ const List = ({ list }) => {
   const aref = useAnimatedRef();
   const open = useSharedValue(false);
   const progress = useDerivedValue(() =>
-    open.value ? withSpring(1) : withTiming(0)
+    open.value ? withSpring(1, { overshootClamping: true }) : withTiming(0)
   );
   const height = useSharedValue(0);
   const headerStyle = useAnimatedStyle(() => ({

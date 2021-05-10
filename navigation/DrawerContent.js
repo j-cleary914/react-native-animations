@@ -21,19 +21,19 @@ export default DrawerContent = (props) => {
           <Text>top section</Text>
         </View>
         <CustomDrawerItem
-          focused={focusedRouteName === "accordianOne" ? true : false}
+          focused={focusedRouteName === "accordianExample" ? true : false}
           icon={["far", "bars"]}
-          label="Accordian"
+          label="Accordian Example"
           onPress={() => {
-            console.log(props.navigation.navigate("accordianOne"));
+            console.log(props.navigation.navigate("accordianExample"));
           }}
         />
         <CustomDrawerItem
-          focused={focusedRouteName === "screenTwo" ? true : false}
+          focused={focusedRouteName === "accordianMyVersion" ? true : false}
           icon={["far", "bars"]}
-          label="to be coded..."
+          label="My Accordian"
           onPress={() => {
-            // console.log(props.navigation.navigate("screenTwo"));
+            console.log(props.navigation.navigate("accordianMyVersion"));
           }}
         />
         <CustomDrawerItem

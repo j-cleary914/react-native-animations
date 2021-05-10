@@ -14,7 +14,7 @@ import DefaultHeader from "../components/DefaultHeader";
 
 import { SafeAreaView } from "react-native-safe-area-context";
 import SafeWitHeaderContentView from "../components/Layout/SafeWitHeaderContentView";
-import Accordian from "../can-it-be-done-in-react-native/Accordian/Accordian";
+import Accordian from "../components/Accordian/Accordian";
 
 // import { Text, View } from "../components/Themed";
 

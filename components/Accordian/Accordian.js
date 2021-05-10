@@ -35,7 +35,7 @@ const list3 = {
 const Accordion = () => {
   return (
     <ScrollView style={styles.container}>
-      <Text style={styles.title}>Markets</Text>
+      <Text style={styles.title}>My Accordian</Text>
       <List {...{ list }} />
       <List list={list2} />
       <List list={list3} />

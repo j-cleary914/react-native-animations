@@ -12,18 +12,6 @@ import Animated, {
 } from "react-native-reanimated";
 
 import Chevron from "./Chevron";
-// import Item, { ListItem } from "./ListItem";
-import Item from "./ListItem";
-import InfoText from "./InfoText";
-
-// export interface List {
-//   name: string;
-//   items: ListItem[];
-// }
-
-// interface ListProps {
-//   list: List;
-// }
 
 const List = ({ list, data }) => {
   const title = data.title.slice(0, 20);

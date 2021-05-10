@@ -6,10 +6,6 @@ import { mix, mixColor } from "react-native-redash";
 
 const size = 30;
 
-// interface ChevronProps {
-//   progress: Animated.SharedValue<number>;
-// }
-
 const Chevron = ({ progress }) => {
   const style = useAnimatedStyle(() => ({
     backgroundColor: mixColor(progress.value, "#525251", "#e45645"),

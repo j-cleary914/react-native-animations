@@ -1,37 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View, ScrollView } from "react-native";
 
-// import List, { List as ListModel } from "./List";
-import List from "./List";
 import ExpandableInfo from "./ExpandableInfo";
-
-const list = {
-  name: "Total Points",
-  items: [
-    { name: "Nathaniel Fitzgerald", points: "$3.45" },
-    { name: "Lawrence Fullter Fitzgerald", points: "$3.45" },
-    { name: "Jacob Mullins", points: "$3.45" },
-    { name: "Jesus Lewis", points: "$3.45" },
-    { name: "Johnny Marr", points: "$2.56" },
-  ],
-};
-
-const list2 = {
-  name: "Total Points",
-  items: [
-    { name: "Nathaniel Fitzgerald", points: "$3.45" },
-    { name: "Lawrence Fullter Fitzgerald", points: "$3.45" },
-    { name: "Jacob Mullins", points: "$3.45" },
-  ],
-};
-
-const list3 = {
-  name: "Total Points",
-  items: [
-    { name: "Nathaniel Fitzgerald", points: "$3.45" },
-    { name: "Lawrence Fullter Fitzgerald", points: "$3.45" },
-  ],
-};
 
 const data = [
   {
@@ -67,31 +37,14 @@ const data = [
 
 const Accordion = () => {
   return (
-    <ScrollView style={styles.container}>
-      <Text style={styles.title}>My Accordian</Text>
+    <ScrollView style={{ flex: 1, backgroundColor: "#f4f4f6", padding: 16 }}>
+      <Text style={{ fontSize: 32, fontWeight: "bold" }}>My Accordian</Text>
       {data.map((ele, index) => {
         return <ExpandableInfo key={index} data={ele} />;
       })}
-      {/* <List {...{ list }} />
-      <List list={list2} />
-      <List list={list3} />
-      <List {...{ list }} />
-      <List {...{ list }} />
-      <List {...{ list }} /> */}
+      <View style={{ height: 40 }}></View>
     </ScrollView>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#f4f4f6",
-    padding: 16,
-  },
-  title: {
-    fontSize: 32,
-    fontWeight: "bold",
-  },
-});
 
 export default Accordion;

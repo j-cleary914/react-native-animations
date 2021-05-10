@@ -13,7 +13,7 @@ export default (props) => {
   // console.log(props);
   return (
     <Drawer.Navigator
-      initialRouteName="accordian"
+      initialRouteName="accordianMyVersion"
       drawerType="front"
       drawerStyle={{
         backgroundColor: "rgba(255,255,255,1)",

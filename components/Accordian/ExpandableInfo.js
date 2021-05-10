@@ -42,6 +42,7 @@ const List = ({ list, data }) => {
   const style = useAnimatedStyle(() => ({
     height: height.value * progress.value + 1,
     opacity: progress.value === 0 ? 0 : 1,
+    // opacity: 1,
   }));
   return (
     <>
@@ -62,30 +63,16 @@ const List = ({ list, data }) => {
         </Animated.View>
       </TouchableWithoutFeedback>
       <Animated.View style={[styles.items, style]}>
-        <View
-          ref={aref}
-          onLayout={({
-            nativeEvent: {
-              layout: { height: h },
-            },
-          }) => console.log({ h })}
-        >
-          <InfoText isLast={false} infoText={infoText} />
-          {/* {list.items.map((item, key) => (
-            <InfoText
-              key={key}
-              isLast={key === list.items.length - 1}
-              infoText={infoText}
-            />
-          ))} */}
-          {/* {list.items.map((item, key) => (
-            <Item
-              key={key}
-              isLast={key === list.items.length - 1}
-              {...{ item }}
-              infoText={infoText}
-            />
-          ))} */}
+        <View style={{ height: 300, backgroundColor: "pink" }}>
+          <Text
+            style={{ fontSize: 16 }}
+            ref={aref}
+            onLayout={(e) => {
+              console.log(e.nativeEvent.layout);
+            }}
+          >
+            {infoText}
+          </Text>
         </View>
       </Animated.View>
     </>

@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-const LIST_ITEM_HEIGHT = 54;
+const LIST_ITEM_HEIGHT = 74;
 
 // export interface ListItem {
 //   name: string;
@@ -13,7 +13,7 @@ const LIST_ITEM_HEIGHT = 54;
 //   isLast: boolean;
 // }
 
-const ListItem = ({ item, isLast }) => {
+const ListItem = ({ item, isLast, infoText }) => {
   const bottomRadius = isLast ? 8 : 0;
   return (
     <View
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     borderBottomWidth: 1,
     borderColor: "#f4f4f6",
-    height: LIST_ITEM_HEIGHT,
+    // height: LIST_ITEM_HEIGHT,
   },
   name: {
     fontSize: 16,

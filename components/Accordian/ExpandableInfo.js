@@ -63,7 +63,18 @@ const List = ({ list, data }) => {
         </Animated.View>
       </TouchableWithoutFeedback>
       <Animated.View style={[styles.items, style]}>
-        <View style={{ height: 300, backgroundColor: "pink" }}>
+        <View
+          style={{
+            backgroundColor: "pink",
+            height: 10000,
+            /*
+              the measure function cannot measure the height of the text correctly until the text has rendeded
+              to avoid cutting off any text we must supply this view with a height larger than the height of the text
+              10000 is larger than any text *should* be in height, (roughly 10x the height of a large phone screen)
+              the view should not grow past the actual height of the text as the actual height gets computed on the press         
+            */
+          }}
+        >
           <Text
             style={{ fontSize: 16 }}
             ref={aref}

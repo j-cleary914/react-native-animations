@@ -1,20 +1,15 @@
-import React from "react";
-import { View, StyleSheet, Text, Pressable, Image } from "react-native";
+import React, { useEffect } from "react";
+import { View, StyleSheet, Text, Pressable } from "react-native";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
-import IconInCircle from "./IconInCircle";
-import * as WebBrowser from "expo-web-browser";
 import Animated, {
-  interpolate,
   useAnimatedStyle,
   useDerivedValue,
   useSharedValue,
-  withSpring,
   withTiming,
 } from "react-native-reanimated";
 import colors from "../constants/Colors";
 import { useNavigation } from "@react-navigation/native";
 import { useIsDrawerOpen } from "@react-navigation/drawer";
-import { useEffect } from "react/cjs/react.development";
 
 export default (props) => {
   const isDrawerOpen = useIsDrawerOpen();
@@ -46,27 +41,12 @@ export default (props) => {
     };
   });
 
-  const handleTwitterPress = () => {
-    // WebBrowser.openBrowserAsync("https://twitter.com/RMGltd");
-  };
-
-  const handleChatPress = () => {
-    // WebBrowser.openBrowserAsync("https://rmgliving.co.uk/live-chat");
-  };
-
   return (
     <View style={styles.headerContainer}>
       <View style={styles.headerLeft}>
         <Pressable
-          onPressIn={() => {
-            // console.log("press in");
-          }}
-          onPressOut={() => {
-            // console.log("press out");
-          }}
           onPress={() => {
             navigation.toggleDrawer();
-            // startAnimation();
           }}
         >
           <Animated.View style={rotateStyle}>
@@ -104,12 +84,5 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "row",
     // backgroundColor: "rgba(100,255,100, 0.3)",
-  },
-  logo: {
-    height: "100%",
-    width: "55%",
-    marginHorizontal: 10,
-    // backgroundColor: "yellow",
-    // justifyContent: "flex-start",
   },
 });

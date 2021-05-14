@@ -25,7 +25,7 @@ export default DrawerContent = (props) => {
           icon={["far", "bars"]}
           label="Accordian Example"
           onPress={() => {
-            console.log(props.navigation.navigate("accordianExample"));
+            props.navigation.navigate("accordianExample");
           }}
         />
         <CustomDrawerItem
@@ -33,15 +33,15 @@ export default DrawerContent = (props) => {
           icon={["far", "bars"]}
           label="My Accordian"
           onPress={() => {
-            console.log(props.navigation.navigate("accordianMyVersion"));
+            props.navigation.navigate("accordianMyVersion");
           }}
         />
         <CustomDrawerItem
-          focused={focusedRouteName === "screenTwo" ? true : false}
-          icon={["fas", "th"]}
-          label="to be coded..."
+          focused={focusedRouteName === "metronomePulse" ? true : false}
+          icon={["fas", "music-alt"]}
+          label="Metronome Pulse"
           onPress={() => {
-            // console.log(props.navigation.navigate("screenTwo"));
+            props.navigation.navigate("metronomePulse");
           }}
         />
         <CustomDrawerItem

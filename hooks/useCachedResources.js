@@ -1,6 +1,26 @@
 import * as Font from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import * as React from "react";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faBars as farBars,
+  faPlus as farPlus,
+  faMinus as farMinus,
+} from "@fortawesome/pro-regular-svg-icons";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import {
+  faComment,
+  faTh,
+  faUser,
+  faBell,
+  faFile,
+  faInfoCircle,
+  faBriefcase,
+  faCommentsAlt,
+  faSignOut,
+  faMusicAlt,
+} from "@fortawesome/pro-solid-svg-icons";
+import { faCreditCard as falCreditCard } from "@fortawesome/pro-light-svg-icons";
 
 export default function useCachedResources() {
   const [isLoadingComplete, setLoadingComplete] = React.useState(false);
@@ -13,6 +33,24 @@ export default function useCachedResources() {
         // SplashScreen.preventAutoHideAsync();
 
         // Load fonts
+        library.add(
+          farBars,
+          faTwitter,
+          faComment,
+          faTh,
+          faUser,
+          faBell,
+          faFile,
+          faInfoCircle,
+          faBriefcase,
+          falCreditCard,
+          faCommentsAlt,
+          faSignOut,
+          farPlus,
+          farMinus,
+          faMusicAlt
+        );
+
         await Font.loadAsync({
           "space-mono": require("../assets/fonts/SpaceMono-Regular.ttf"),
         });

@@ -11,6 +11,8 @@ import colors from "../constants/Colors";
 import { useNavigation } from "@react-navigation/native";
 import { useIsDrawerOpen } from "@react-navigation/drawer";
 
+export const HEADER_HEIGHT = 50;
+
 export default (props) => {
   const isDrawerOpen = useIsDrawerOpen();
   const navigation = useNavigation();
@@ -42,7 +44,7 @@ export default (props) => {
   });
 
   return (
-    <View style={styles.headerContainer}>
+    <View style={[styles.headerContainer, { height: HEADER_HEIGHT }]}>
       <View style={styles.headerLeft}>
         <Pressable
           onPress={() => {
@@ -63,7 +65,6 @@ export default (props) => {
 
 const styles = StyleSheet.create({
   headerContainer: {
-    height: 50,
     width: "100%",
     backgroundColor: colors.statusBarColor,
     flexDirection: "row",

@@ -17,6 +17,8 @@ import { HEADER_HEIGHT } from "../components/DefaultHeader";
 export default () => {
   const [tapTimestamps, setTapTimestamps] = useState([]);
   const [beatsInBar, setBeatsInBar] = useState(4);
+  const [bpmAccuracy, setBpmAccuracy] = useState("oneBar");
+  //point of this is to add another function in where we can have higher accuracy bpm calculation by averaging more taps
 
   useEffect(() => {}, []);
 
@@ -40,10 +42,8 @@ export default () => {
       const mostRecentBar = tapTimestamps.slice(
         tapTimestamps.length - beatsInBar
       );
-      const dif1 = mostRecentBar[1] - mostRecentBar[0];
-      const dif2 = mostRecentBar[2] - mostRecentBar[1];
-      const dif3 = mostRecentBar[3] - mostRecentBar[2];
-      const avgDifInMilliseconds = (dif1 + dif2 + dif3) / 3000; //only works for 4 beats per bar
+      // timeBetween1and4 =
+      const avgDifInMilliseconds = (mostRecentBar[3] - mostRecentBar[0]) / 3000; //only works for 4 beats per bar
       const bpm = 60 / avgDifInMilliseconds;
       return bpm;
     }

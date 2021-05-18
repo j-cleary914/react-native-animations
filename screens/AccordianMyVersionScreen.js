@@ -10,7 +10,7 @@ import {
 import { FontText } from "../components/FontText";
 import * as Updates from "expo-updates";
 import * as SplashScreen from "expo-splash-screen";
-import DefaultHeader from "../components/DefaultHeader";
+import DefaultHeader from "../components/Layout/DefaultHeader";
 
 import { SafeAreaView } from "react-native-safe-area-context";
 import SafeWitHeaderContentView from "../components/Layout/SafeWitHeaderContentView";

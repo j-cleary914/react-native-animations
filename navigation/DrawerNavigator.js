@@ -6,15 +6,14 @@ import AccordianMyVersionScreen from "../screens/AccordianMyVersionScreen";
 
 import DrawerContent from "./DrawerContent";
 import MetronomePulseScreen from "../screens/MetronomePulseScreen";
+import CustomDrawerScreen from "../screens/CustomDrawerScreen";
 
 const Drawer = createDrawerNavigator();
 
 export default (props) => {
-  // console.log("nonono");
-  // console.log(props);
   return (
     <Drawer.Navigator
-      initialRouteName="metronomePulse"
+      initialRouteName="customDrawer"
       drawerType="front"
       drawerStyle={{
         backgroundColor: "rgba(255,255,255,1)",
@@ -31,6 +30,7 @@ export default (props) => {
         component={AccordianMyVersionScreen}
       />
       <Drawer.Screen name="metronomePulse" component={MetronomePulseScreen} />
+      <Drawer.Screen name="customDrawer" component={CustomDrawerScreen} />
     </Drawer.Navigator>
   );
 };

@@ -9,10 +9,10 @@ import {
   Pressable,
 } from "react-native";
 import { FontText } from "../components/FontText";
-import DefaultHeader from "../components/DefaultHeader";
+import DefaultHeader from "../components/Layout/DefaultHeader";
 
 import SafeWitHeaderContentView from "../components/Layout/SafeWitHeaderContentView";
-import { HEADER_HEIGHT } from "../components/DefaultHeader";
+import { HEADER_HEIGHT } from "../components/Layout/DefaultHeader";
 
 export default () => {
   const [tapTimestamps, setTapTimestamps] = useState([]);

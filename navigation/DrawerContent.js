@@ -45,11 +45,11 @@ export default DrawerContent = (props) => {
           }}
         />
         <CustomDrawerItem
-          focused={focusedRouteName === "screenTwo" ? true : false}
+          focused={focusedRouteName === "customDrawer" ? true : false}
           icon={["fas", "th"]}
-          label="to be coded..."
+          label="Custom Side Drawer"
           onPress={() => {
-            // console.log(props.navigation.navigate("screenTwo"));
+            console.log(props.navigation.navigate("customDrawer"));
           }}
         />
         <CustomDrawerItem

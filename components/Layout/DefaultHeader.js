@@ -7,7 +7,7 @@ import Animated, {
   useSharedValue,
   withTiming,
 } from "react-native-reanimated";
-import colors from "../constants/Colors";
+import colors from "../../constants/Colors";
 import { useNavigation } from "@react-navigation/native";
 import { useIsDrawerOpen } from "@react-navigation/drawer";
 

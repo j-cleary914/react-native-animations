@@ -2,7 +2,7 @@ import { useLinkProps } from "@react-navigation/native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import colors from "../../constants/Colors";
-import DefaultHeader from "../DefaultHeader";
+import DefaultHeader from "./DefaultHeader";
 
 export default (props) => (
   <SafeAreaView

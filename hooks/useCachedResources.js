@@ -6,6 +6,8 @@ import {
   faBars as farBars,
   faPlus as farPlus,
   faMinus as farMinus,
+  faHome as farHome,
+  faCog as farCog,
 } from "@fortawesome/pro-regular-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import {
@@ -19,6 +21,8 @@ import {
   faCommentsAlt,
   faSignOut,
   faMusicAlt,
+  faSearch,
+  faTimes,
 } from "@fortawesome/pro-solid-svg-icons";
 import { faCreditCard as falCreditCard } from "@fortawesome/pro-light-svg-icons";
 
@@ -48,7 +52,11 @@ export default function useCachedResources() {
           faSignOut,
           farPlus,
           farMinus,
-          faMusicAlt
+          faMusicAlt,
+          farHome,
+          faSearch,
+          farCog,
+          faTimes
         );
 
         await Font.loadAsync({
